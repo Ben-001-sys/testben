@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+<!-- Video side -->
+<div class="video-side">
+  <iframe 
+    src="https://www.youtube.com/embed/QEr8hJTKFeE?autoplay=1&mute=1&loop=1&playlist=QEr8hJTKFeE"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    allowfullscreen
+    style="border:3px solid #ff00ff; border-radius:12px; box-shadow:0 0 20px rgba(255,0,255,0.5), 0 0 40px rgba(8,247,254,0.4); pointer-events: none;">
+  </iframe>
+</div>
+
+
+
+
+<!-- Form side -->
+<div class="form-side">
+  <div class="form-box" style="background:rgba(10,10,20,0.9); padding:30px; border-radius:14px; box-shadow:0 0 25px rgba(0,255,200,0.5), inset 0 0 15px rgba(0,255,200,0.2); text-align:center; width:340px; border:2px solid rgba(0,255,200,0.4); position:relative; overflow:hidden;">
+
+    <!-- Futuristic border animation -->
+    <div style="position:absolute; top:0; left:-100%; width:100%; height:3px; background:linear-gradient(90deg, transparent, #00ffcc, transparent); animation:scan 2s linear infinite;"></div>
+
+    {% if username %}
+      <p style="margin-top:15px; color: #00ff99; font-family: 'Orbitron', sans-serif; font-size:30px; font-weight:bold;">
+        Welcome, {{ username }}!
+      </p>
+
+      <!-- Dropdown navigation -->
+      <label for="navSelect" style="display:block; margin-top:20px; font-size:14px; color:#00ffcc; font-family:'Orbitron', sans-serif;">Choose a Destination:</label>
+      <select id="navSelect" style="margin-top:10px; width:100%; padding:10px; border-radius:8px; background:#0a0a15; color:#00ffcc; border:1px solid #00ffcc; font-family:'Segoe UI', sans-serif; text-align:center; font-size:14px; cursor:pointer;" onchange="if(this.value) window.location.href=this.value;">
+        <option value="">-- Select a Chapter --</option>
+        <option value="/web-design"> Web Design</option>
+        <option value="/AI">AI</option>
+        <option value="/cyber-security">Cyber security</option>
+        <option value="/ui-ux">UI & UX</option>
+        <option value="/computer-programming">Computer Programming</option>
+        <option value="/information and digital literacy">Computer, Information and Digital literacy</option>
+        <option value="/animation">Animation</option>
+        <option value="/graphic-design">Graphic Design</option>
+        <option value="/digital-marketing">Digital Marketing</option>
+        <option value="/sound-video-editing">Sound & video Editing</option>
+      </select>
+
+      <label for="navSelect" style="display:block; margin-top:20px; font-size:14px; color:#00ffcc; font-family:'Orbitron', sans-serif;">
+        Choose a new starting zone:
+      </label>
+      <select id="navSelect" 
+        style="margin-top:10px; width:100%; padding:10px; border-radius:8px; background:#0a0a15; color:#00ffcc; border:1px solid #00ffcc; font-family:'Segoe UI', sans-serif; text-align:center; font-size:14px; cursor:pointer;"
+        onchange="if(this.value){ window.open(this.value, '_blank'); }">
+        <option value="">-- Select Destination --</option>
+        <option value="https://cn.wbdwta.com">Alexis</option>
+        <option value="https://courage.wbdwta.com">Courage</option>
+        <option value="https://nabil.wbdwta.com">Nabil</option>
+        <option value="https://kingsley.wbdwta.com">Kingsley</option>
+        <option value="https://ellen.wbdwta.com">Ellen</option>
+        <option value="https://blessed.wbdwta.com">Blessed</option>
+      </select>
+    {% endif %}
+  </div>
+</div>
+
+
+<!-- Inline animation -->
+<style>
+@keyframes scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+</style>
+
+</div>
+
+{% endblock %}

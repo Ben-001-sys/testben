@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Journey Complete{% endblock %}
+
+{% block content %}
+<div style="display:flex; justify-content:center; align-items:center; height:100vh; color:#fff; font-family:'Orbitron', sans-serif; text-align:center; flex-direction:column;">
+
+  <!-- Victory Glow -->
+  <h1 style="font-size:48px; color:#00ffcc; text-shadow:0 0 15px #00ffcc, 0 0 30px #ff00ff; margin-bottom:20px; animation:pulse 2s infinite;">
+    🎮 Mission Complete 🎮
+  </h1>
+
+  <!-- Subtext -->
+  <p style="font-size:20px; color:#aaa; max-width:600px; margin:0 auto 30px; line-height:1.6;">
+    You’ve reached the end of this adventure. But every ending is a new beginning.  
+    The quest continues... 🚀
+  </p>
+
+  <div style="margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+    <a href="https://cn.wbdwta.com" target="_blank" class="adventure-btn">Alexis</a>
+    <a href="https://courage.wbdwta.com" target="_blank" class="adventure-btn">Courage</a>
+    <a href="https://nabil.wbdwta.com" target="_blank" class="adventure-btn">Nabil</a>
+    <a href="https://kingsley.wbdwta.com" target="_blank" class="adventure-btn">Kingsley</a>
+    <a href="https://ellen.wbdwta.com" target="_blank" class="adventure-btn">Ellen</a>
+    <a href="https://blessed.wbdwta.com" target="_blank" class="adventure-btn">Blessed</a>
+  </div>
+
+  <!-- Score / Badge -->
+  <div style="padding:20px 40px; border-radius:16px; border:2px solid #00ffcc; box-shadow:0 0 20px rgba(0,255,200,0.4), inset 0 0 10px rgba(0,255,200,0.3); margin-bottom:30px;">
+    <h2 style="margin:0; font-size:24px; color:#00ffaa;">🏆 Achievement Unlocked</h2>
+    <p style="margin:10px 0 0 0; font-size:16px; color:#ddd;">Journey Conqueror</p>
+  </div>
+
+  <!-- Action Buttons -->
+  <div>
+    <a href="/" 
+       style="display:inline-block; margin:10px; padding:14px 26px; background:linear-gradient(90deg,#00ffcc,#00ffaa); color:#0a0a0a; font-weight:bold; border-radius:10px; text-decoration:none; box-shadow:0 0 20px rgba(0,255,200,0.6); transition:0.3s;">
+       Restart Journey
+    </a>
+  </div>
+
+</div>
+
+<style>
+@keyframes pulse {
+  0% { text-shadow:0 0 10px #00ffcc, 0 0 20px #ff00ff; }
+  50% { text-shadow:0 0 25px #00ffcc, 0 0 40px #ff00ff; }
+  100% { text-shadow:0 0 10px #00ffcc, 0 0 20px #ff00ff; }
+}
+  .adventure-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    background: #029978;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(10, 58, 47, 0.5);
+  }
+
+  .adventure-btn:hover {
+    background: #00ffcc;
+    box-shadow: 0 0 15px rgba(0,255,200,0.8);
+    transform: scale(1.05);
+  }
+</style>
+{% endblock %}
